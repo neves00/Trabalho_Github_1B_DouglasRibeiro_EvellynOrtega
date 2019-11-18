@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 /*
@@ -29,6 +30,11 @@ void substituirLetra(char letra1,char letra2, string texto)
 */
 int contaPalavras(string palavra, string texto)
 {
+    int cont, i;
+    for(i=0;i<texto.length();i++)
+        if(texto[i]==palavra)
+            cont++;
+    return cont;
 }
 
 /*
@@ -36,12 +42,22 @@ int contaPalavras(string palavra, string texto)
 */
 void substituirPalavras(string palavra1, string palavra2, string texto)
 {
+    int i;
+    for(i=0;i<texto.length();i++)
+        if(texto[i]==palavra1)
+            texto[i]==palavra2;
 }
 
 int main(){
-
+    int contP, contL;
+    char letra, letra1, letra2;
+    string texto, palavra, palavra1, palavra2;
 	cout << "Entre com o texto para fazer o teste:";
-
+    cin>>texto;
+    contP=contaPalavras(palavra, texto);
+    contL=contaLetras(letra, texto);
+    substituirLetra(letra1, letra2, texto);
+    substituirPalavras( palavra1, palavra2, texto);
 
 
 
